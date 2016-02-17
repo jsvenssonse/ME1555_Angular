@@ -1,52 +1,32 @@
 <!DOCTYPE html>
 <html ng-app="app">
-<head>
-     <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    
-    
-    <!-- CSS   -->
-    <link href="../css/style.css" rel="stylesheet">
-    
-    <!-- CSS Lib  -->
-    <link href="../lib/css/foundation.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../lib/fonts/font-awesome.min.css">
-        <!-- JS Lib -->
-    <script src="../lib/js/jquery-2.1.4.min.js"></script>
-    <script src="../lib/js/angular.min.js"></script>
-    <script src="../lib/js/angular-route.min.js"></script>
-    
-</head>
-<body>
-
-<div class="row">
-    <div class="small-12 large-12 columns">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <!-- CSS   -->
+        <link href="../css/style.css" rel="stylesheet">
+        
+        <!-- CSS Lib  -->
+        <link href="../lib/css/foundation.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../lib/fonts/font-awesome.min.css">
+            <!-- JS Lib -->
+        <script src="../lib/js/jquery-2.1.4.min.js"></script>
+        <script src="../lib/js/angular.min.js"></script>
+        <script src="../lib/js/angular-route.min.js"></script>
+    </head>
+    <body>
         <div class="row">
-            <ul>
-                <li><a class="active" href="#/home">Home</a></li>
-                <li><a href="#/flow">News</a></li>
-                <li><a href="#/profile">Contact</a></li>
-            </ul>
+            <header ng-include="'views/nav.html'"></header>
+            <div class="small-12 large-12 columns">
+                <div ng-view></div> 
+            </div> 
         </div>
-    </div>
-    <div class="small-12 large-12 columns">
-        <div ng-view>
-           
-       </div> 
-   </div> 
-    <div class="small-12 large-12 columns">
-        Footer
-    </div> 
-   </div> 
-</div>
-    <!-- JS   -->
-   
-    <script src="../app/app.js"></script>
-    <script src="../app/controllers/homeController.js"></script>
-    <script src="../app/controllers/flowController.js"></script>
-
-
-</body>
+        
+        <!-- JS   -->
+        <script src="../app/app.js"></script>
+        <script src="../app/controllers/homeController.js"></script>
+        <script src="../app/controllers/flowController.js"></script>
+    </body>
 </html>
 
 
