@@ -13,9 +13,9 @@ app.config(function($locationProvider, $routeProvider) {
 		templateUrl: 'views/profile.html',
 		controller: 'profileController'
 	})
-	.when('/flow', {
-		templateUrl: 'views/flow.html',
-		controller: 'flowController'
+	.when('/news', {
+		templateUrl: 'views/news.html',
+		controller: 'newsController'
 	})
 	.otherwise({ redirectTo: '/' });
 });

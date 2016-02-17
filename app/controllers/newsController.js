@@ -1,4 +1,4 @@
-app.controller('flowController', function($scope, $http) {
+app.controller('newsController', function($scope, $http) {
 
 	$http({
 		method: 'GET',
