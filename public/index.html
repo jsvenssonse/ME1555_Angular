@@ -3,33 +3,35 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-        <!-- CSS   -->
-        <link href="../css/style.css" rel="stylesheet">
-        
+
         <!-- CSS Lib  -->
         <link href="../lib/css/foundation.min.css" rel="stylesheet">
+        
+        <!-- CSS   -->
+        <link href="../css/style.css" rel="stylesheet">
         <link rel="stylesheet" href="../lib/fonts/font-awesome.min.css">
-            <!-- JS Lib -->
+        
+        <!-- JS Lib -->
         <script src="../lib/js/jquery-2.1.4.min.js"></script>
         <script src="../lib/js/angular.min.js"></script>
         <script src="../lib/js/angular-route.min.js"></script>
+        <script src="../lib/js/foundation.min.js"></script>
     </head>
     <body>
         <div class="row">
-            <header ng-include="'views/nav.html'"></header>
+            <header class="top-bar custom" ng-include="'views/nav.html'"></header>
             <div class="small-12 large-12 columns">
                 <div ng-view></div> 
             </div> 
+            <footer ng-include="'views/footer.html'"></footer>
         </div>
         
         <!-- JS   -->
         <script src="../app/app.js"></script>
+        
         <script src="../app/controllers/homeController.js"></script>
         <script src="../app/controllers/newsController.js"></script>
         <script src="../app/controllers/profileController.js"></script>
+
     </body>
 </html>
-
-
-
-

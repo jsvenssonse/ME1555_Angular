@@ -1,9 +1,12 @@
+
 <div ng-repeat="news in data">
-{{news.firstname}} {{news.lastname}}<br>
-{{news.content}}<br>
-<br>
-	<ul ng-if="news.tags.length >= -0" ng-repeat="tags in data|limitTo:news.tags.length">
-		<li>{{news.tags[$index]}}</li>
-	</ul>
-		<hr>
+	<div class="callout large shadow">
+
+		{{news.firstname}} {{news.lastname}}<br>
+		{{news.content}}<br>
+		
+		<ul ng-if="news.tags.length >= -0" ng-repeat="tags in data|limitTo:news.tags.length">
+			<span class="label">{{news.tags[$index]}}</span>
+		</ul>
+	</div>
 </div>
