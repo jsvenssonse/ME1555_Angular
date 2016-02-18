@@ -1,6 +1,9 @@
-<div ng-repeat="flow in flows">
-{{flow.content}}<br><hr>
-
-
+<div ng-repeat="news in data">
+{{news.firstname}} {{news.lastname}}<br>
+{{news.content}}<br>
+<br>
+	<ul ng-if="news.tags.length >= -0" ng-repeat="tags in data|limitTo:news.tags.length">
+		<li>{{news.tags[$index]}}</li>
+	</ul>
+		<hr>
 </div>
-
