@@ -6,32 +6,63 @@
 
         <!-- CSS Lib  -->
         <link href="../lib/css/foundation.min.css" rel="stylesheet">
-        
+
         <!-- CSS   -->
-        <link href="../css/style.css" rel="stylesheet">
-        <link rel="stylesheet" href="../lib/fonts/font-awesome.min.css">
-        
+        <link href="/css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="/lib/fonts/font-awesome.min.css">
+
         <!-- JS Lib -->
-        <script src="../lib/js/jquery-2.1.4.min.js"></script>
-        <script src="../lib/js/angular.min.js"></script>
-        <script src="../lib/js/angular-route.min.js"></script>
-        <script src="../lib/js/foundation.min.js"></script>
+        <script src="/lib/js/jquery-2.1.4.min.js"></script>
+        <script src="/lib/js/angular.min.js"></script>
+        <script src="/lib/js/angular-route.min.js"></script>
+        <script src="/lib/js/foundation.min.js"></script>
     </head>
     <body>
         <div class="row">
             <header class="top-bar custom" ng-include="'views/nav.html'"></header>
             <div class="small-12 large-12 columns">
-                <div ng-view></div> 
-            </div> 
+                <div ng-view></div>
+            </div>
             <footer ng-include="'views/footer.html'"></footer>
         </div>
-        
-        <!-- JS   -->
-        <script src="../app/app.js"></script>
-        
-        <script src="../app/controllers/homeController.js"></script>
-        <script src="../app/controllers/newsController.js"></script>
-        <script src="../app/controllers/profileController.js"></script>
 
+        <!-- JS   -->
+        <script src="/app/app.js"></script>
+
+        <script src="/app/controllers/homeController.js"></script>
+
+        <script src="/app/controllers/newsController.js"></script>
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+          var socket = io.connect('http://localhost:1337');
+          var player = document.getElementById('player');
+          var source = document.getElementById('source');
+          socket.on('video', function(content){
+            //player.src = (window.URL || window.webkitURL).createObjectURL(video);
+
+          /*   Image Drawing: Works Fine!
+            var ctx = document.getElementById('canvas').getContext('2d');
+            var img = new Image();
+            img.src = 'data:image/jpeg;base64,' + content.buffer;
+            ctx.drawImage(img, 0, 0);
+            console.log(content);
+      */
+            /*
+            * Music Streaming: Works Fine
+            console.log(content);
+            source.src = 'data:audio/mp3;base64,' + content.buffer;
+            player.load();
+            player.play();
+      */
+            console.log(content);
+            for (var i = 0; i < content.length; i++){
+              console.log(content);
+            }
+            source.src = 'data:video/mp4;base64,' + content.buffer;
+            player.load();
+            player.play();
+              });
+        </script>
     </body>
 </html>
