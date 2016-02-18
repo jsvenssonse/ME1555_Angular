@@ -5,21 +5,24 @@
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 
         <!-- CSS Lib  -->
-        <link href="../lib/css/foundation.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.1.2/foundation.css" rel="stylesheet">
 
         <!-- CSS   -->
         <link href="../css/style.css" rel="stylesheet">
         <link rel="stylesheet" href="../lib/fonts/font-awesome.min.css">
 
         <!-- JS Lib -->
-        <script src="../lib/js/jquery-2.1.4.min.js"></script>
+        <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
         <script src="../lib/js/angular.min.js"></script>
         <script src="../lib/js/angular-route.min.js"></script>
-        <script src="../lib/js/foundation.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.1.2/foundation.js"></script>
     </head>
     <body>
+        
         <div class="row">
-            <header class="top-bar custom" ng-include="'views/nav.html'"></header>
+            
+            <div class="top-bar custom" ng-include="'views/nav.html'"></div>
+            
             <div class="small-12 large-12 columns">
                 <div ng-view></div>
             </div>
