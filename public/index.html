@@ -16,6 +16,8 @@
         <script src="../lib/js/angular-route.min.js"></script>
         <script src="../lib/js/vendor/jquery-2.2.0.min.js"></script>
         <script src="../lib/js/foundation.min.js"></script>
+        <script src="../lib/js/vendor/modernizr.js"></script>
+        
 
         
         <!-- Fonts -->
@@ -24,9 +26,7 @@
     <body>
         
         <div class="row">
-            <div class="top-bar logo"><h1>Indagator</h1></div>
-            <div class="top-bar navbarCustom" ng-include="'views/nav.html'"></div>
-            
+            <nav class="top-bar" data-topbar role="navigation" ng-include="'views/nav.html'"></nav>
             <div class="small-12 large-12 columns">
                 <div ng-view></div>
             </div>
