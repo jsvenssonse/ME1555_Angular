@@ -1,4 +1,6 @@
 angular.module('app').controller('profileController', function($scope, $http) {
+	$scope.title='Profile';
+
 
 $http({
 		method: 'GET',
@@ -13,7 +15,7 @@ $http({
 
 
 
-	$scope.title='hej';
+
 
 $http({
 		method: 'GET',

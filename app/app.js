@@ -11,7 +11,7 @@ app.config(function($locationProvider, $routeProvider) {
 	})
 	.when('/profile', {
 		templateUrl: 'views/profile.html',
-		controller: 'profileController',
+		controller: 'profileController'
 	})
 	.when('/news', {
 		templateUrl: 'views/news.html',
