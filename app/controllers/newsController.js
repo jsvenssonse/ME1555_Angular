@@ -7,6 +7,5 @@ $http({
 		var datan = response.data;
 		var counter = datan.length;
 	    $scope.data = datan;
-	   
 	  });
 });
