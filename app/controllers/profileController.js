@@ -19,7 +19,7 @@ $http({
 		var datan = response.data;
 		var counter = datan.length;
 	    $scope.posts = datan;
-	   //console.log(datan);
+	   console.log(datan);
 	  });
 
 

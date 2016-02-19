@@ -1,16 +1,79 @@
 <div class="row">
 	<div class="row">
 		<div class="small-4 large-4 columns">
-			<img src="../img/albert.jpg" alt="">
+			<table width="100%">
+				<thead>
+					<tr>
+						<th><center>Profile</center></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><img src="../img/albert.jpg" alt=""></td>
+						</tr><tr>
+						<td><b><center>Dr. {{user.firstname}} {{user.lastname}}</center></b></td>
+					</tr>
+				</tbody>
+			</table>
+			<hr>
 			<div class="small-12 large-12 columns">
-			<h5>Dr. {{user.firstname}} {{user.lastname}}</h5>
-			Experience<br>
+			
+			
+			<table width="100%">
+				<thead>
+					<tr>
+						<th>Fields</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Physics, philosophy</td>
+					</tr>
+				</tbody>
+			</table>
+			<table width="100%">
+				<thead>
+					<tr>
+						<th>Institutions</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr><td>Swiss Patent Office (Bern) (1902–1909)</td></tr>
+					<tr><td>University of Bern (1908–1909)</td></tr>
+					<tr><td>University of Zurich (1909–1911)</td></tr>
+					<tr><td>Charles University in Prague (1911–1912)</td></tr>
+					<tr><td>ETH Zurich (1912–1914)</td></tr>
+					<tr><td>Prussian Academy of Sciences (1914–1933)</td></tr>
+					<tr><td>Humboldt University of Berlin (1914–1917)</td></tr>
+					<tr><td>Kaiser Wilhelm Institute (director, 1917–1933)</td></tr>
+					<tr><td>German Physical Society (president, 1916–1918)</td></tr>
+					<tr><td>Leiden University (visits, 1920–)</td></tr>
+					<tr><td>Institute for Advanced Study (1933–1955)</td></tr>
+					<tr><td>Caltech (visits, 1931-33)</td></tr>
+				</tbody>
+			</table>
+			<table width="100%">
+				<thead>
+					<tr>
+						<th>Notable awards</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr><td>Barnard Medal (1920)</td></tr>
+					<tr><td>Nobel Prize in Physics (1921)</td></tr>
+					<tr><td>Matteucci Medal (1921)</td></tr>
+					<tr><td>ForMemRS (1921)[2]</td></tr>
+					<tr><td>Copley Medal (1925)[2]</td></tr>
+					<tr><td>Max Planck Medal (1929)</td></tr>
+					<tr><td>Time Person of the Century (1999)</td></tr>
+				</tbody>
+			</table>
 			</div>
 		</div>
 		<div class="small-6 large-8 columns">
 			<div style="width: 100%; height: 20px; border-bottom: 1px solid black; text-align: center">
   				<span style="font-size: 20px; background-color: #fff; padding: 0 10px;">
-    				Updates
+    				Workbook
 				</span>
 			</div><br>
 			<div class="small-12 large-12 columns" ng-repeat="news in posts|limitTo:3">
@@ -24,9 +87,6 @@
 			<ul class="pagination">
 			<div class="small-2 large-2 columns"><li class="arrow unavailable"><a href="">&laquo;</a></li></div>
 			<div class="small-8 large-8 columns">
-
-				
-					
 					<li class="current"><a href="">1</a></li>
 					<li><a href="">2</a></li>
 			  		<li><a href="">3</a></li>
@@ -36,8 +96,6 @@
 			  		<li><a href="">13</a></li>
 			  		<li><a href="">14</a></li>
 			  		<li><a href="">15</a></li>
-			  		
-				
 			</div>
 			<div class="small-2 large-2 columns"><li class="arrow"><a href="">&raquo;</a></li></div>
 			</ul>
