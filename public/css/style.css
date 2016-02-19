@@ -39,3 +39,8 @@ ul.menu {
     background-color: transparent;
 }
 
+#callout {
+    padding: 20px;
+    text-align: center;
+        font-family: 'Raleway', sans-serif;
+}
