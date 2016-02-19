@@ -25,14 +25,14 @@
     </head>
     <body>
         
-        <div class="row">
+        <div class="row min-height">
             <nav class="top-bar" data-topbar role="navigation" ng-include="'views/nav.html'"></nav><br> 
             <div class="small-12 large-12 columns">
                 <div ng-view></div>
             </div>
             
         </div>
-
+    <footer ng-include="'views/footer.html'"></footer>
         <!-- JS   -->
         <script src="/app/app.js"></script>
 
@@ -76,6 +76,6 @@
             $(document).foundation();
         </script>
         
-        <footer ng-include="'views/footer.html'"></footer>
+        
     </body>
 </html>
