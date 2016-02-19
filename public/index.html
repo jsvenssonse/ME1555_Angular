@@ -26,11 +26,11 @@
     <body>
         
         <div class="row">
-            <nav class="top-bar" data-topbar role="navigation" ng-include="'views/nav.html'"></nav>
+            <nav class="top-bar" data-topbar role="navigation" ng-include="'views/nav.html'"></nav><br> 
             <div class="small-12 large-12 columns">
                 <div ng-view></div>
             </div>
-            <footer ng-include="'views/footer.html'"></footer>
+            
         </div>
 
         <!-- JS   -->
@@ -76,6 +76,6 @@
             $(document).foundation();
         </script>
         
-
+        <footer ng-include="'views/footer.html'"></footer>
     </body>
 </html>
