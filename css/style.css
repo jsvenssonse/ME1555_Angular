@@ -2,15 +2,12 @@
     box-shadow: 2px 2px 0px #ccc;
 }
 
-.custom {
+.navbarCustom {
     margin-bottom: 10px;
+    background-color:rgba(192,192,192,0.05);
 }
 
-.panel {
-    width: 100%;
-}
-
-.badge {
+.profileBadge {
     background: url("../img/albert.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
@@ -19,13 +16,29 @@
 }
 
 #menuLeft {
-    margin-top: 10px;
+    padding-top: 10px;
 }
 
 #menuRight {
     margin-right: 20px;
 }
 
-.label {
-    
+.logo {
+    background-color: #fefefe;
+    text-align: center;
+}
+
+/* Giving each header a certain font. Better way to do this? */
+h1  {   
+    font-family: 'Raleway', sans-serif;
+    font-size: 4.5em;
+}
+
+/* Making sure there is not a grey background around each unordered list. */
+ul.menu {
+    background-color: transparent;
+}
+
+a {
+    font: black;
 }

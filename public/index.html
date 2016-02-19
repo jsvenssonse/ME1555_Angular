@@ -8,19 +8,24 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.1.2/foundation.min.css">
 
         <!-- CSS   -->
-        <link href="/css/style.css" rel="stylesheet">
         <link rel="stylesheet" href="/lib/fonts/font-awesome.min.css">
+        <link href="/css/style.css" rel="stylesheet">
 
         <!-- JS Lib -->
         <script src="../lib/js/angular.min.js"></script>
         <script src="../lib/js/angular-route.min.js"></script>
+        <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+        <script src="https://cdn.jsdelivr.net/foundation/6.1.2/foundation.min.js"></script>
 
+        
+        <!-- Fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
     </head>
     <body>
         
         <div class="row">
-            
-            <div class="top-bar custom" ng-include="'views/nav.html'"></div>
+            <div class="top-bar logo"><h1>Indagator</h1></div>
+            <div class="top-bar navbarCustom" ng-include="'views/nav.html'"></div>
             
             <div class="small-12 large-12 columns">
                 <div ng-view></div>
@@ -70,7 +75,6 @@
             $(document).foundation();
         </script>
         
-        <script src="https://cdn.jsdelivr.net/foundation/6.1.2/foundation.min.js"></script>
-        <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+
     </body>
 </html>
