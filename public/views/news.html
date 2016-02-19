@@ -1,14 +1,14 @@
 <table width="100%" ng-repeat="news in data|limitTo:3">
     <thead>
         <tr>
-            <th>{{news.title}}</th>
+            <th><h3>{{news.title}}</h3></th>
         </tr>
     </thead>
     <tbody>
     <tr>
         <td>
-            <h4>{{news.firstname}} {{news.lastname}}</h4>
-            {{news.content}}
+            <h4>By : {{news.firstname}} {{news.lastname}}</h4>
+            <p>{{news.content}}</p>
             <br>
             <div class="tags" ng-if="news.tags.length >= -0" ng-repeat="tags in data|limitTo:news.tags.length">
                 <span class="label">{{news.tags[$index]}}</span>
