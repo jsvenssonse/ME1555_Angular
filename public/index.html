@@ -5,28 +5,32 @@
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 
         <!-- CSS Lib  -->
-        <link href="/lib/css/foundation.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="/lib/css/foundation.min.css">
 
         <!-- CSS   -->
-        <link href="/css/style.css" rel="stylesheet">
         <link rel="stylesheet" href="/lib/fonts/font-awesome.min.css">
+        <link href="css/style.css" rel="stylesheet">
 
         <!-- JS Lib -->
-        <script src="/lib/js/jquery-2.1.4.min.js"></script>
-        <script src="/lib/js/angular.min.js"></script>
-        <script src="/lib/js/angular-route.min.js"></script>
-        <script src="/lib/js/foundation.min.js"></script>
+        <script src="../lib/js/angular.min.js"></script>
+        <script src="../lib/js/angular-route.min.js"></script>
+        <script src="../lib/js/vendor/jquery-2.2.0.min.js"></script>
+        <script src="../lib/js/foundation.min.js"></script>
+        <script src="../lib/js/vendor/modernizr.js"></script>
+
+
+
+        <!-- Fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Raleway:100,500' rel='stylesheet' type='text/css'>
     </head>
     <body>
         <div class="row">
-            <header class="top-bar custom" ng-include="'views/nav.html'"></header>
-            <!--<video id="player" controls>
-              <source id="source" type="video/mp4"></source>
-            </video>-->
+            <nav class="top-bar" data-topbar role="navigation" ng-include="'views/nav.html'"></nav><br> 
             <div class="small-12 large-12 columns">
                 <div ng-view></div>
             </div>
-            <footer ng-include="'views/footer.html'"></footer>
+
         </div>
 
         <!-- JS   -->
@@ -35,6 +39,7 @@
         <script src="/app/controllers/homeController.js"></script>
 
         <script src="/app/controllers/newsController.js"></script>
+        <script src="/app/controllers/profileController.js"></script>
 
         <script src="/socket.io/socket.io.js"></script>
         <script>
@@ -50,5 +55,10 @@
 
           });
         </script>
+        <script>
+            $(document).foundation();
+        </script>
+
+        <footer ng-include="'views/footer.html'"></footer>
     </body>
 </html>

@@ -1,5 +1,12 @@
-app.controller('homeController', function($scope) {
+app.controller('homeController', function($scope, $http) {
 
-  $scope.PageTitle = "Home"
-  
+$http({
+		method: 'GET',
+		url: apiURL+'posts'
+	}).then(function successCallback(response) {
+		var datan = response.data;
+		var counter = datan.length;
+	    $scope.data = datan;
+	   
+	  });
 });

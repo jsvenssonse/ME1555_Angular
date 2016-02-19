@@ -9,10 +9,15 @@ var concat = require('concat-stream');
 //let video = require('./public/content/[HorribleSubs] Naruto Shippuuden - 448 [1080p].mkv');
 
 app.use('/lib/', express.static(__dirname + '/lib'));
+app.use('/lib/fonts', express.static(__dirname + '/lib/fonts'));
 app.use('/app/', express.static(__dirname + '/app'));
-app.use('/css/', express.static(__dirname + '/css'));
-app.use('/img/', express.static(__dirname + '/img'));
+/*app.use('/css/', express.static(__dirname + '/css'));
+app.use('/img/', express.static(__dirname + '/img'));*/
 app.use('/views/', express.static(__dirname + '/public/views'));
+app.use('/css/', express.static(__dirname + '/public/css'));
+app.use('/img/', express.static(__dirname + '/public/img'));
+app.use('/js/', express.static(__dirname + '/public/js'));
+
 
 app.get('/', function(req, res){
   res.sendFile('./public/index.html', { root : __dirname});
