@@ -2,11 +2,14 @@
 <div ng-repeat="news in data">
 	<div class="callout large shadow">
 
-		{{news.firstname}} {{news.lastname}}<br>
-		{{news.content}}<br>
+		{{news.firstname}}
+        <br>
+        {{news.lastname}}
+        <br>
+		{{news.content}}
 		
-		<ul ng-if="news.tags.length >= -0" ng-repeat="tags in data|limitTo:news.tags.length">
+		<div ng-if="news.tags.length >= -0" ng-repeat="tags in data|limitTo:news.tags.length">
 			<span class="label">{{news.tags[$index]}}</span>
-		</ul>
+		</div>
 	</div>
 </div>
