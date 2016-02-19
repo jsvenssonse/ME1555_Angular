@@ -1,5 +1,11 @@
 <div>
 
+{{title}}<br>
+{{user.firstname}} {{user.lastname}}<br>
 
 
+<div ng-repeat="news in posts">
+{{posts[$index].title}}<br>
+{{posts[$index].content}}
+<br>
 </div>
