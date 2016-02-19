@@ -8,7 +8,6 @@
     <tr>
         <td>
             <h4>{{news.firstname}} {{news.lastname}}</h4>
-            <br>
             {{news.content}}
             <br>
             <div class="tags" ng-if="news.tags.length >= -0" ng-repeat="tags in data|limitTo:news.tags.length">
