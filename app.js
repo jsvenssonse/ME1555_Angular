@@ -5,6 +5,7 @@ let app = express();
 let io = require('socket.io').listen(app.listen(1337));
 let fs = require('fs');
 var request = require('request');
+var concat = require('concat-stream');
 //let video = require('./public/content/[HorribleSubs] Naruto Shippuuden - 448 [1080p].mkv');
 
 app.use('/lib/', express.static(__dirname + '/lib'));
@@ -33,13 +34,15 @@ io.on('connection', function(socket) {
   });*/
   /*Video streaming: Fails to run toString();
   */
-  /* let video = fs.createReadStream('Charli_XCX_-_Break_The_Rules_[Official_Video].mp4');
+  let video = fs.createReadStream('Charli_XCX_-_Break_The_Rules_[Official_Video].mp4');
    video.on('data', function(data){
      //socket.send({video: true, buffer: data});
+     console.log(data.length);
      socket.emit('video', {video: true, buffer: data.toString('base64')});
+     //.toString('base64')
    });
 
-   video.on('end', function(){
+/*   video.on('end', function(){
      Stream(video);
    });
 
