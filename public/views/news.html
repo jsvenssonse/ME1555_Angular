@@ -1,8 +1,15 @@
 
-<div ng-repeat="news in data|limitTo:3">
-	<div class="callout large" id="callout">
+
+			<table width="100%" ng-repeat="news in data|limitTo:3">
+				<thead>
+					<tr>
+						<th>{{posts[$index].title}}</th>
+					</tr>
+				</thead>
+				<tbody><div >
+					<tr><td>
 		{{news.firstname}}
-        <br>
+
         {{news.lastname}}
         <br>
 		{{news.content}}
@@ -10,8 +17,12 @@
 		<div class="tags" ng-if="news.tags.length >= -0" ng-repeat="tags in data|limitTo:news.tags.length">
 			<span class="label">{{news.tags[$index]}}</span>
 		</div>
-	</div>
-    
+</td></tr>
+
+
+				</tbody>
+                
+			</table>
 
 </div>
 
