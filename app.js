@@ -55,7 +55,7 @@ io.on('connection', function(socket) {
   //fs.createReadStream('Charli_XCX_-_Break_The_Rules_[Official_Video].mp4').pipe(request.);
 });
 
-let server = app.listen(1337, 'localhost', function(){
+let server = app.listen(8000, 'localhost', function(){
   let host = server.address().address;
   let port = server.address().port;
   console.log(`Running at ${host}:${port}`);
