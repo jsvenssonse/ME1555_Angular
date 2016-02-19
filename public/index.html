@@ -5,7 +5,8 @@
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 
         <!-- CSS Lib  -->
-        <link rel="stylesheet" href="../lib/css/foundation.min.css">
+
+        <link rel="stylesheet" href="/lib/css/foundation.min.css">
 
         <!-- CSS   -->
         <link rel="stylesheet" href="/lib/fonts/font-awesome.min.css">
@@ -17,11 +18,11 @@
         <script src="../lib/js/vendor/jquery-2.2.0.min.js"></script>
         <script src="../lib/js/foundation.min.js"></script>
         <script src="../lib/js/vendor/modernizr.js"></script>
-        
 
-        
+
+
         <!-- Fonts -->
-        <link href='https://fonts.googleapis.com/css?family=Raleway:100,500' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,100,200' rel='stylesheet' type='text/css'>
     </head>
     <body>
         
@@ -30,7 +31,7 @@
             <div class="small-12 large-12 columns">
                 <div ng-view></div>
             </div>
-            
+
         </div>
     <footer ng-include="'views/footer.html'"></footer>
         <!-- JS   -->
@@ -46,36 +47,20 @@
           var socket = io.connect('http://localhost:1337');
           var player = document.getElementById('player');
           var source = document.getElementById('source');
+          var array = [];
+          var mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
+          var ms = new MediaSource();
+          player.src = URL.createObjectURL(ms);
+          ms.addEventListener('sourceopen');
           socket.on('video', function(content){
-            //player.src = (window.URL || window.webkitURL).createObjectURL(video);
 
-          /*   Image Drawing: Works Fine!
-            var ctx = document.getElementById('canvas').getContext('2d');
-            var img = new Image();
-            img.src = 'data:image/jpeg;base64,' + content.buffer;
-            ctx.drawImage(img, 0, 0);
-            console.log(content);
-      */
-            /*
-            * Music Streaming: Works Fine
-            console.log(content);
-            source.src = 'data:audio/mp3;base64,' + content.buffer;
-            player.load();
-            player.play();
-      */
-            console.log(content);
-            for (var i = 0; i < content.length; i++){
-              console.log(content);
-            }
-            source.src = 'data:video/mp4;base64,' + content.buffer;
-            player.load();
-            player.play();
-              });
+          });
         </script>
         <script>
             $(document).foundation();
         </script>
-        
-        
+
+        <footer ng-include="'views/footer.html'"></footer>
+
     </body>
 </html>

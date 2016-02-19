@@ -29,11 +29,27 @@
 }
 
 /* Giving each header a certain font. Better way to do this? */
-h1  {   
+h1,h2  {   
     font-family: 'Raleway', sans-serif;
-    font-size: 4.5em;
+    font-weight: 100;
 }
 
+h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;    
+}
+
+h4 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 1em; 
+}
+
+h5 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 0.5em;
+}
 /* Making sure there is not a grey background around each unordered list. */
 ul.menu {
     background-color: transparent;
