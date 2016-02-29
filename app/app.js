@@ -17,6 +17,10 @@ app.config(function($locationProvider, $routeProvider) {
 		templateUrl: 'views/news.html',
 		controller: 'newsController'
 	})
+    .when('/create', {
+        templateUrl: 'views/create.html',
+        controller: 'createController'
+    })
 	.otherwise({ redirectTo: '/' });
 });
 
