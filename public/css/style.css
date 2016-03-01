@@ -1,3 +1,11 @@
+@charset "UTF-8";
+
+
+.row-navbar{
+    background-color: #333;
+    height: 6%;
+}
+
 .shadow {
     box-shadow: 1px 1px 0px #EBEBEB;
     
@@ -78,16 +86,11 @@ div.ng-scope.tags {
 }
 
 .min-height{
-    min-height: 70vh;
+    min-height: 58vh;
 }
 
 
 /*Footer skit*/
-@charset "UTF-8";
-/*.row {
-  max-width: 1200px;
-    
-  }*/
 
 .footer {
   background-color: #292c2f;

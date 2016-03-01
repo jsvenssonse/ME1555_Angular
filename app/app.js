@@ -17,6 +17,14 @@ app.config(function($locationProvider, $routeProvider) {
 		templateUrl: 'views/news.html',
 		controller: 'newsController'
 	})
+    .when('/courses', {
+		templateUrl: 'views/courses.html',
+		controller: 'coursesController'
+	})
+    .when('/course', {
+		templateUrl: 'views/course.html',
+		controller: 'courseController'
+	})
 	.otherwise({ redirectTo: '/' });
 });
 

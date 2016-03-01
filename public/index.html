@@ -18,6 +18,7 @@
         <script src="../lib/js/vendor/jquery-2.2.0.min.js"></script>
         <script src="../lib/js/foundation.min.js"></script>
         <script src="../lib/js/vendor/modernizr.js"></script>
+        <script src="../lib/js/foundation/foundation.js"></script>
 
 
 
@@ -25,9 +26,13 @@
         <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,100,200' rel='stylesheet' type='text/css'>
     </head>
     <body>
-        
+    <div class="row-navbar">
+        <div class="row">
+            <nav class="top-bar" data-topbar role="navigation" ng-include="'views/nav.html'"></nav>
+        </div>
+    </div><br> 
         <div class="row min-height">
-            <nav class="top-bar" data-topbar role="navigation" ng-include="'views/nav.html'"></nav><br> 
+            
             <div class="small-12 large-12 columns">
                 <div ng-view></div>
             </div>
@@ -58,6 +63,7 @@
         </script>
         <script>
             $(document).foundation();
+
         </script>
 
     </body>
