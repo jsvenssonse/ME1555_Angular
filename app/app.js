@@ -17,10 +17,14 @@ app.config(function($locationProvider, $routeProvider) {
 		templateUrl: 'views/news.html',
 		controller: 'newsController'
 	})
-    .when('/create', {
-        templateUrl: 'views/create.html',
-        controller: 'createController'
-    })
+    .when('/courses', {
+		templateUrl: 'views/courses.html',
+		controller: 'coursesController'
+	})
+    .when('/course', {
+		templateUrl: 'views/course.html',
+		controller: 'courseController'
+	})
 	.otherwise({ redirectTo: '/' });
 });
 
