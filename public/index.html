@@ -6,7 +6,7 @@
 
         <!-- CSS Lib  -->
 
-        <link rel="stylesheet" href="/lib/css/foundation.min.css">
+        <link rel="stylesheet" href="/lib/css/bootstrap.min.css">
 
         <!-- CSS   -->
         <link rel="stylesheet" href="/lib/fonts/font-awesome.min.css">
@@ -16,12 +16,8 @@
         <script src="../lib/js/angular.min.js"></script>
         <script src="../lib/js/angular-route.min.js"></script>
         <script src="../lib/js/vendor/jquery-2.2.0.min.js"></script>
-        <script src="../lib/js/foundation.min.js"></script>
-        <script src="../lib/js/vendor/modernizr.js"></script>
-        <script src="../lib/js/foundation/foundation.js"></script>
-        <script src="../lib/js/foundation/foundation.accordion.js"></script>
-
-
+        <script src="../lib/js/bootstrap.min.js"></script>
+        
         <!-- Fonts -->
         <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,100,200' rel='stylesheet' type='text/css'>
     </head>
@@ -46,10 +42,11 @@
 
         <script src="/app/controllers/newsController.js"></script>
         <script src="/app/controllers/profileController.js"></script>
+        <script src="/app/controllers/createController.js"></script>
 
         <script src="/socket.io/socket.io.js"></script>
         <script>
-          var socket = io.connect('http://localhost:1337');
+          //var socket = io.connect('http://localhost:1337');
           var player = document.getElementById('player');
           var source = document.getElementById('source');
           var array = [];
