@@ -1,6 +1,6 @@
 var app = angular.module('app', ['ngRoute']);
 
-var apiURL = 'http://88.131.100.231:81/api/';
+var apiURL = 'http://localhost:8000/api/';
 
 app.config(function($locationProvider, $routeProvider) {
 	$routeProvider
@@ -24,6 +24,10 @@ app.config(function($locationProvider, $routeProvider) {
     .when('/course', {
 		templateUrl: 'views/course.html',
 		controller: 'courseController'
+	})
+    .when('/create', {
+		templateUrl: 'views/create.html',
+		controller: 'createController'
 	})
 	.otherwise({ redirectTo: '/' });
 });

@@ -1,11 +1,11 @@
-<form ng-submit="submitForm()">
-        <label>Title</label>
-        <input type="text" name="title" class="form-control" ng-model="postData.title">
-        <label>Content</label>
-        <input type="text" name="content" class="form-control" ng-model="postData.content">
-        
-        <input type="hidden" name="user_id" class="form-control" ng-model="postData.user_id" value="1">
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+
+    <input type="hidden" name="user_id" ng-model="user_id"  />
+    <input type="hidden" name="tags" ng-model="tags"  />
+    <input type="hidden" name="title" ng-model="title"/>
+    <input type="hidden" name="content" ng-model="content"  />
     
-</form>
+    
+    <button ng-click="SendData()">Submit</button>
+    <hr />
+    {{ PostDataResponse }}
+
