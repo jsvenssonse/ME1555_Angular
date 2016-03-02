@@ -1,10 +1,13 @@
 var app = angular.module('app', ['ngRoute']);
 
+<<<<<<< HEAD
 var apiURL = 'http://88.131.100.231:81:81/api/';
+=======
+var apiURL = 'http://88.131.100.231:81/api/';
+>>>>>>> jesper
 
 app.config(function($locationProvider, $routeProvider) {
-	$routeProvider
-
+    $routeProvider
 	.when('/', {
 		templateUrl: 'views/home.html',
 		controller: 'homeController'
