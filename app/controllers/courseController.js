@@ -1,5 +1,4 @@
 app.controller('courseController', function($scope, $http) {
-
 $http({
 		method: 'GET',
 		url: apiURL+'posts'

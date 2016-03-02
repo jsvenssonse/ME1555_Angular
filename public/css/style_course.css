@@ -1,0 +1,45 @@
+/*Course saker*/
+
+.courseBorder{
+    border: 1px solid #8f9296;
+    border-radius: 7px;
+    min-height: 200px;
+    margin-top: 10px;
+}
+.courseBackgoundStep{
+    /*background-color: rgb(222, 241, 255);
+    background-color: rgb(46, 137, 255);*/
+    border-radius: 7px 7px 0px 0px;
+    margin-top: -1px;
+    border-right: 1px solid #888888;
+    border-left: 1px solid #888888;
+    border-bottom: 0px solid #888888;
+    border-top: 1px solid #888888;
+}
+
+.shadows{
+    box-shadow: 5px 0px 5px 0px #888888;
+}
+
+.spacing{
+ margin-top: 25px;  
+}
+.border-course-box{
+    border-style: none;
+    border-right: 1px solid #888888;
+    border-left: 1px solid #888888;
+    border-bottom: 1px solid #888888;
+}
+.border-steps-box{
+    border-style: none;
+    border-right: 1px solid #888888;
+    border-left: 1px solid #888888;
+    border-bottom: 1px solid #888888;
+    border-top: 1px solid #888888;
+    border-radius: 7px;
+    box-shadow: 1px 0px 1px 0px #33383b;
+    margin-top: 10px;
+}
+.hide-me{
+    /*display: none;*/
+}

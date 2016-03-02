@@ -1,5 +1,7 @@
-app.controller('coursesController', function($scope, $http) {
 
+
+/*
+app.controller('coursesController', function($scope, $http) {
 $http({
 		method: 'GET',
 		url: apiURL+'posts'
@@ -9,4 +11,4 @@ $http({
 	    $scope.data = datan;
 	   
 	  });
-});
+});*/   
