@@ -1,12 +1,9 @@
 <div class="row">
-    <div class="small-12 large-12 columns">
-        Courses
+    <h1 class="center">Choose a category</h1>
+    <div class="categories">
+        <div ng-repeat="cat in categories" class="col-md-4 categories">
+            <h3 class="categories">{{ cat.cat }}</h3>
+        </div>
     </div>
-    <div class="small-12 large-12 columns">
-        Välj kurs
-    </div>
-    <div class="small-12 large-12 columns">
-    </div>
-    <div class="small-12 large-12 columns">
-    </div>
+
 </div>

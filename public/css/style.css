@@ -88,7 +88,7 @@ div.ng-scope.tags {
 .min-height{
     min-height: 58vh;
 }
-body { padding-top: 70px; }
+body { padding-top: 60px; }
 
 #navbar {
     background-color: #33383b;
@@ -101,6 +101,16 @@ body { padding-top: 70px; }
 
 #navbar a:hover {
     background-color:  #474e52;
+}
+
+.categories {
+    text-align: center;
+    padding: 50px;
+    padding-top: 30px;
+}
+.center {
+    text-align: center;
+    padding: 10px;
 }
 
 
