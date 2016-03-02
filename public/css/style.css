@@ -100,12 +100,9 @@ body { padding-top: 70px; }
 }
 
 #navbar a:hover {
-    background-color: #ccc;
+    background-color:  #474e52;
 }
 
-#navbar > li > a:focus {
-    background-color: #fff;
-}
 
 
 
