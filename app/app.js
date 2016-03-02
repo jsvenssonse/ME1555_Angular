@@ -29,6 +29,6 @@ app.config(function($locationProvider, $routeProvider) {
 		templateUrl: 'views/create.html',
 		controller: 'createController'
 	})
-	.otherwise({ redirectTo: '/' });
+	//.otherwise({ redirectTo: '/' });
 });
 
