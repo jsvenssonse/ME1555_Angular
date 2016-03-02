@@ -22,16 +22,10 @@
         <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,100,200' rel='stylesheet' type='text/css'>
     </head>
     <body>
-    <div class="row-navbar">
-        <div class="row">
-            <nav class="top-bar" data-topbar role="navigation" ng-include="'views/nav.html'"></nav>
-        </div>
-    </div><br> 
-        <div class="row min-height">
-            
-            <div class="small-12 large-12 columns">
+        <nav id="navbar" class="navbar navbar-default navbar-fixed-top" data-topbar role="navigation" ng-include="'views/nav.html'"></nav>
+
                 <div ng-view></div>
-            </div>
+
 
         </div>
     <footer ng-include="'views/footer.html'"></footer>
