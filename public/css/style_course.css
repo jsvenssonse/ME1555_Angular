@@ -1,7 +1,7 @@
 /*Course saker*/
 
-.courseBorder{
-    border: 1px solid #8f9296;
+.steps-courseBorder{
+    border: 1px solid #000;
     border-radius: 7px;
     min-height: 200px;
     margin-top: 10px;

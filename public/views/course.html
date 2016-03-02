@@ -8,44 +8,29 @@
 
 <div class="row">
     <div class="col-md-12">
-        <h2><b>-> Hur du blir en utforskare av världen!</b></h2>
+        <h2><b>-> {{data.title}}</b></h2>
     </div>
     <div class="col-md-12">
         <h3>Introduktion/beskrivning</h3>
     </div>
-    <div class="col-md-12">
-        Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed porttitor lectus nibh.
-    </div>
-    <div class="col-md-12"><h3>Step 1 - Find your v'a'g</h3></div>
-    <div class="col-md-12">
-        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-            <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingOne">
-                    <h4 class="panel-title">
-                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href=".collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                            Collapsible Group Item #1
-                        </a>
-                    </h4>
+    <div class="col-md-12">{{data.desc}}</div>
+    <div class="col-md-12 steps-courseBorder" ng-repeat="step in steps">
+        <h3>Step {{$index+1}} - {{step.title}}</h3>
+        <div class="col-md-12" ng-repeat="childStep in steps[$index].childsteps">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href=".collapse{{$index+1}}" aria-expanded="false" aria-controls="collapse{{$index+1}}">
+                                {{childStep.title}}
+                            </a>
+                        </h4>
+                    </div>
                 </div>
-            </div>
-            <div class="panel-collapse collapse collapseOne" role="tabpanel" aria-labelledby="headingOne">
-                <div class="panel-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                </div>
-            </div>
-        
-            <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingOne">
-                    <h4 class="panel-title">
-                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href=".collapse2" aria-expanded="false" aria-controls="collapse2">
-                            Collapsible Group Item #2
-                        </a>
-                    </h4>
-                </div>
-            </div>
-            <div class="panel-collapse collapse collapse2" role="tabpanel" aria-labelledby="headingOne">
-                <div class="panel-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                <div class="panel-collapse collapse collapse{{$index+1}}" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        {{childStep.desc}}
+                    </div>
                 </div>
             </div>
         </div>
