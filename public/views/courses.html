@@ -3,7 +3,7 @@
     <div class="categories">
         
         <div ng-repeat="category in categories | filter:filters" class="col-md-4">
-            <a ng-click="filters.category = link.category" >{{ category.name }}</a>
+            <a ng-click="filters.category = link.category" >{{ category.cat }}</a>
             <h3>{{ category.title }} <br></h3>
             
         </div>
