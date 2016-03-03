@@ -1,18 +1,33 @@
 app.controller('coursesController', function($scope, $http) {
-   angular.element(document).ready(function () {
-        $(".categories").click(function(){
-            console.log("lol");
-        }); 
-    });
 
-    $http.get( apiURL + "cats")
+
+    $http.get( apiURL + "courses")
     .then(function(response) {
         
-        var data = {
-            cat : response.data.cat,
-            desc : response.data[0].desc
-        };
+        $scope.filters = {};
         
-        $scope.categories = response.data;
+        var data = [{
+            categories: [
+                {name : "Programming", title: "Learn C++"},
+                {name : "Science", title: "Learn nuclear fission"},
+                {name : "Plan", title: [
+                   "Trip to Paris", 
+                   "Start a company",
+                   "Get sixpack abs"
+                ]}
+            ]
+        }]
+        
+        
+        $scope.categories = data[0].categories;
+        
+        $scope.mo = console.log(data[0].concat(categories));
+        
+        
+//    angular.element(document).ready(function () {
+//         $(".categories").click(function( event ){
+//             console.log($scope.categories);
+//         }); 
+//     });
     });
 });

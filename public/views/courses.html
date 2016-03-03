@@ -1,8 +1,11 @@
 <div class="row">
     <h1 class="center">Choose a category</h1>
     <div class="categories">
-        <div ng-repeat="cat in categories" class="col-md-4 categories">
-            <h3 class="categories">{{ cat.cat }}</h3>
+        
+        <div ng-repeat="category in categories | filter:filters" class="col-md-4">
+            <a ng-click="filters.category = link.category" >{{ category.name }}</a>
+            <h3>{{ category.title }} <br></h3>
+            
         </div>
     </div>
 
