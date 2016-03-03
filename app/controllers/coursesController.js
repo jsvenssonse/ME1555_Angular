@@ -1,15 +1,16 @@
 app.controller('coursesController', function($scope, $http) {
-
-
-    $http.get( apiURL + "courses")
+    
+    $scope.categories = "";
+    $http.get( apiURL + "cat/" + $scope.categories )
     .then(function(response) {
         
         $scope.filters = {};
         
+        $scope.categories = "programming";
         
-        $scope.categories = response.data;
+        $scope.cats = response.data;
         
-        $scope.mo = console.log(response.data);
+        $scope.mo = console.log($scope.categories);
         
         
 //    angular.element(document).ready(function () {
