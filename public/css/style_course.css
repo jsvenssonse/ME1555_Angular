@@ -6,7 +6,9 @@
     min-height: 200px;
     margin-top: 10px;
 }
-
+.right{
+    float: right;
+}
 /*
 .courseBackgoundStep{
     border-radius: 7px 7px 0px 0px;

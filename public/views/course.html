@@ -8,7 +8,7 @@
 
 <div class="row">
     <div class="col-md-12">
-        <h2><b>-> {{data.title}}</b></h2>
+        <h2><b>{{data.title}}</b></h2>
     </div>
     <div class="col-md-12">
         <h3>Introduktion/beskrivning</h3>
@@ -20,17 +20,19 @@
         <br>{{step.desc}}<br><br>
         <div class="col-md-12" ng-repeat="childStep in steps[$index].childsteps">
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                <input type="checkbox" name="vehicle" value="Bike"> I have a bike
+                
                 <div class="panel panel-default">
                     <div class="panel-heading" role="tab" id="headingOne">
                         <h4 class="panel-title">
-                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href=".collapse{{$index+1}}" aria-expanded="false" aria-controls="collapse{{$index+1}}">
-                                {{$index+1}}. {{childStep.title}}
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href=".collapse{{$index+1}}{{step.id}}" aria-expanded="false" aria-controls="collapse{{$index+1}}">
+                                {{$index+1}}. {{childStep.title}} 
                             </a>
+                            <input class="right" type="checkbox" name="vehicle" value="Bike"> 
+                            <p class="right">Finish..</p>
                         </h4>
                     </div>
                 </div>
-                <div class="panel-collapse collapse collapse{{$index+1}}" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-collapse collapse collapse{{$index+1}}{{step.id}}" role="tabpanel" aria-labelledby="headingOne">
                     <div class="panel-body">
                         {{childStep.desc}}
                     </div>
@@ -38,6 +40,6 @@
             </div>
         </div>
     </div>
-    <div class="col-md-12">Skriven och producerad av MR. Bond</div>
+    <div class="col-md-12"><p class="right">Skriven och producerad av MR. Bond</p></div>
 </div>
 
