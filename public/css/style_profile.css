@@ -1,0 +1,18 @@
+.bgcolor{
+    background-color: #fffafa;
+}
+
+.profileBadge {
+    background: url("../img/albert.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 155px;
+}
+.border{
+    border: 1px solid #ddd;
+    
+}
+.bottom{
+    margin-top: 150px;
+}

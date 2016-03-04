@@ -15,14 +15,17 @@
     </div>
     <div class="col-md-12">{{data.desc}}</div>
     <div class="col-md-12 steps-courseBorder" ng-repeat="step in steps">
-        <h3>Step {{$index+1}} - {{step.title}}</h3>
+        <h3>Step {{$index+1}} - {{step.title}}</h3><u>Description:</u>
+        <br>
+        <br>{{step.desc}}<br><br>
         <div class="col-md-12" ng-repeat="childStep in steps[$index].childsteps">
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <input type="checkbox" name="vehicle" value="Bike"> I have a bike
                 <div class="panel panel-default">
                     <div class="panel-heading" role="tab" id="headingOne">
                         <h4 class="panel-title">
                             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href=".collapse{{$index+1}}" aria-expanded="false" aria-controls="collapse{{$index+1}}">
-                                {{childStep.title}}
+                                {{$index+1}}. {{childStep.title}}
                             </a>
                         </h4>
                     </div>
@@ -37,3 +40,4 @@
     </div>
     <div class="col-md-12">Skriven och producerad av MR. Bond</div>
 </div>
+

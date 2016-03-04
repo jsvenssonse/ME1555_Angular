@@ -1,14 +1,14 @@
 /*Course saker*/
 
 .steps-courseBorder{
-    border: 1px solid #000;
+    border: 1px solid #ddd;
     border-radius: 7px;
     min-height: 200px;
     margin-top: 10px;
 }
+
+/*
 .courseBackgoundStep{
-    /*background-color: rgb(222, 241, 255);
-    background-color: rgb(46, 137, 255);*/
     border-radius: 7px 7px 0px 0px;
     margin-top: -1px;
     border-right: 1px solid #888888;
