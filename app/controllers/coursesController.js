@@ -1,22 +1,17 @@
 app.controller('coursesController', function($scope, $http) {
-    
-    $scope.categories = "";
-    $http.get( apiURL + "cat/" + $scope.categories )
+    $http.get( apiURL + "courses" )
     .then(function(response) {
+
+        $scope.courses = response.data;
         
-        $scope.filters = {};
-        
-        $scope.categories = "programming";
-        
-        $scope.cats = response.data;
-        
-        $scope.mo = console.log($scope.categories);
-        
-        
-//    angular.element(document).ready(function () {
-//         $(".categories").click(function( event ){
-//             console.log($scope.categories);
-//         }); 
-//     });
+        $scope.mo = console.log(response.data);
+
+    angular.element(document).ready(function () {
+            $(".box").click(function(){
+                $(".click").fadeOut();
+                $(".click").remove();
+                $(".box").remove();
+         });
     });
+});
 });

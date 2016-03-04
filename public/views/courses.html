@@ -1,12 +1,15 @@
-<div class="row">
+<div class="row categories">
     <h1 class="center">Choose a category</h1>
-    <div class="categories">
-        
-        <div ng-repeat="category in categories | filter:filters" class="col-md-4">
-            <a ng-click="filters.category = link.category" >{{ category.cat }}</a>
-            <h3>{{ category.title }} <br></h3>
-            
+    <div ng-repeat="course in courses | limitTo: 6">
+        <div class="col-md-4 box">
+            <div class="click" ng-click="hidden =! hidden">
+                <h3>{{ course.cat }}</h3>
+            </div>
+        </div>
+    <div ng-show="hidden" class="fade-in-out" id="center">
+        <div class="col-md-12">
+            <h3>{{ course.title }}<h3>
+            <h3>{{ course.desc }}<h3>
         </div>
     </div>
-
 </div>

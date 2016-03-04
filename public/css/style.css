@@ -76,7 +76,7 @@ ul.menu {
 #callout {
     padding: 20px;
     text-align: center;
-        font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 
@@ -105,17 +105,35 @@ body { padding-top: 60px; }
 
 .categories {
     text-align: center;
-    padding: 50px;
+    padding: 10px;
     padding-top: 30px;
 }
 .center {
     text-align: center;
     padding: 10px;
+    padding-bottom: 30px;
 }
 
+.fade-in-out {
+  transition: 1s linear all;  
+  opacity: 1;
+}
 
+.fade-in-out.ng-hide {
+  opacity: 0;
+}
 
+.box {
+    padding: 30px;
+    
+    background-color:rgba(41,44,47,0.05);
+    border: 10px solid white;
+    border-radius: 15px;
+}
 
+.box:hover {
+    background-color:rgba(192,192,192,0.04);
+}
 /*Footer skit*/
 
 .footer {
