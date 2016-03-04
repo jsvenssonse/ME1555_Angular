@@ -7,10 +7,10 @@ app.controller('coursesController', function($scope, $http) {
         $scope.mo = console.log(response.data);
 
     angular.element(document).ready(function () {
-            $(".box").click(function(){
+            $(".col-md-4").click(function(){
                 $(".click").fadeOut();
                 $(".click").remove();
-                $(".box").remove();
+                $(".col-md-4.box").remove();
          });
     });
 });
