@@ -28,6 +28,7 @@
         <nav id="navbar" class="navbar navbar-default navbar-fixed-top" data-topbar role="navigation" ng-include="'views/nav.html'"></nav>
         <div class="container">
             <div ng-view></div>
+                <a href="/auth/google" class="button alert"><i class="fa fa-google"></i>&nbsp Sign in with Google</a>
         </div>
         </div>
     <footer ng-include="'views/footer.html'"></footer>
@@ -40,20 +41,6 @@
         <script src="/app/controllers/courseController.js"></script>
         <script src="/app/controllers/coursesController.js"></script>
 
-        <script src="/socket.io/socket.io.js"></script>
-        <script>
-          //var socket = io.connect('http://localhost:1337');
-          var player = document.getElementById('player');
-          var source = document.getElementById('source');
-          var array = [];
-          var mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
-          var ms = new MediaSource();
-          player.src = URL.createObjectURL(ms);
-          ms.addEventListener('sourceopen');
-          socket.on('video', function(content){
-
-          });
-        </script>
         <script>
             $(document).foundation();
 

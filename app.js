@@ -1,65 +1,52 @@
 'use strict';
 
+//Requires
 let express = require('express');
 let app = express();
-let io = require('socket.io').listen(app.listen(1337));
-let fs = require('fs');
-var request = require('request');
-var concat = require('concat-stream');
-//let video = require('./public/content/[HorribleSubs] Naruto Shippuuden - 448 [1080p].mkv');
+let mongoose = require('mongoose');
+let passport = require('passport');
+let session = require('express-session');
+let request = require('superagent');
 
+//Connect to MongoDB
+//mongoose.connect('mongodb://127.0.0.1:27017/ME1555');
+//Require the config for PassportJS
+require('./app/config/passport.js')(passport);
+
+//Static content
 app.use('/lib/', express.static(__dirname + '/lib'));
 app.use('/lib/fonts', express.static(__dirname + '/lib/fonts'));
 app.use('/app/', express.static(__dirname + '/app'));
-/*app.use('/css/', express.static(__dirname + '/css'));
-app.use('/img/', express.static(__dirname + '/img'));*/
 app.use('/views/', express.static(__dirname + '/public/views'));
 app.use('/css/', express.static(__dirname + '/public/css'));
 app.use('/img/', express.static(__dirname + '/public/img'));
 app.use('/js/', express.static(__dirname + '/public/js'));
 
+//App session for saving data in sessions
+app.use(session({
+    secret: 'somethingsosecretyouwouldntevenknow',
+    resave: true,
+    saveUninitialized: true
+}));
 
+//Engage in Passport session
+app.use(passport.initialize());
+app.use(passport.session());
+
+//Require the passport auth file
+require('./app/routes/authRoute.js')(app, passport);
+
+//Test route
 app.get('/', function(req, res){
-  res.sendFile('./public/index.html', { root : __dirname});
+    res.sendFile('./public/index.html', { root : __dirname});
 });
+//To get user info: req.user
+//TODO: Start using the Youtube API to create streams
+/*app.get('/createStream', function(req, res){
+    
+});*/
 
-io.on('connection', function(socket) {
-
-  /*
-  *
-  fs.readFile('rene-laennecs-235th-birthday-5654467158474752-hp2x.jpg', function(err, buf){
-    socket.emit('video', {video: true, buffer: buf.toString('base64')});
-  });
-
-  /*
-  * Music Streaming: Works fine!
-  *
-  fs.readFile('Charli_XCX_-_Break_The_Rules_Official_Video.mp3', function(err, buf){
-    socket.emit('video', {video: true, buffer: buf.toString('base64')});
-  });*/
-  /*Video streaming: Fails to run toString();
-  */
-  let video = fs.createReadStream('Charli_XCX_-_Break_The_Rules_[Official_Video].mp4');
-   video.on('data', function(data){
-     //socket.send({video: true, buffer: data});
-     console.log(data.length);
-     socket.emit('video', {video: true, buffer: data.toString('base64')});
-     //.toString('base64')
-   });
-
-/*   video.on('end', function(){
-     Stream(video);
-   });
-
-   let Stream = function(video){
-     console.log(video);
-     socket.emit('video', {video: true, buffer: video});
-   }*/
-
-  //socket.emit('video').pipe(fs.createReadStream('Charli_XCX_-_Break_The_Rules_[Official_Video].mp4'));
-  //fs.createReadStream('Charli_XCX_-_Break_The_Rules_[Official_Video].mp4').pipe(request.);
-});
-
+//Start server and listen on port 8000
 let server = app.listen(8000, 'localhost', function(){
   let host = server.address().address;
   let port = server.address().port;
