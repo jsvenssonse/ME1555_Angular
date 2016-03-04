@@ -29,6 +29,7 @@
             <nav class="top-bar" data-topbar role="navigation" ng-include="'views/nav.html'"></nav><br> 
             <div class="small-12 large-12 columns">
                 <div ng-view></div>
+                <a href="/auth/google" class="button alert"><i class="fa fa-google"></i>&nbsp Sign in with Google</a>
             </div>
 
         </div>
@@ -39,22 +40,7 @@
         <script src="/app/controllers/homeController.js"></script>
 
         <script src="/app/controllers/newsController.js"></script>
-        <script src="/app/controllers/profileController.js"></script>
-
-        <script src="/socket.io/socket.io.js"></script>
-        <script>
-          var socket = io.connect('http://localhost:1337');
-          var player = document.getElementById('player');
-          var source = document.getElementById('source');
-          var array = [];
-          var mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
-          var ms = new MediaSource();
-          player.src = URL.createObjectURL(ms);
-          ms.addEventListener('sourceopen');
-          socket.on('video', function(content){
-
-          });
-        </script>
+        <script src="/app/controllers/profileController.js"></script> 
         <script>
             $(document).foundation();
         </script>
