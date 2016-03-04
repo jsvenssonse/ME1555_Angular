@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ngRoute']);
+var app = angular.module('app', ['ngRoute', 'ngResource', 'ngAnimate']);
 
 var apiURL = 'http://88.131.100.231:81/api/';
 
@@ -23,6 +23,10 @@ app.config(function($locationProvider, $routeProvider) {
     .when('/create', {
 		templateUrl: 'views/create.html',
 		controller: 'createController'
+	})
+    .when(':cat', {
+		templateUrl: 'views/home.html',
+		controller: 'homeController'
 	})
 	.otherwise({ redirectTo: '/' });
 });
