@@ -16,13 +16,7 @@
     background-color:rgba(192,192,192,0.05);
 }
 
-.profileBadge {
-    background: url("../img/albert.jpg");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    height: 40px;
-    width: 200%;
-}
+
 #menuLeft {
     padding-top: 10px;
 }
@@ -135,15 +129,18 @@ body { padding-top: 60px; }
     background-color:rgba(192,192,192,0.04);
 }
 /*Footer skit*/
-
+.footer p{
+    font-size: 15px;
+}
 .footer {
   background-color: #292c2f;
   text-align: center;
   font-size: 1.2rem;
   padding: 4rem;  
     min-width: 100%;
+    margin-top: 100px;
 }
-  .footer .inline-list a {
+  .footer .list-inline a {
     display: inline-block;
     width: 2rem;
     height: 2rem;
@@ -153,21 +150,25 @@ body { padding-top: 60px; }
     color: #fff;
     text-align: center;
     line-height: 35px;
-    margin: 0 3px 0 0; }
+    margin: 0 3px 0 0; 
+    }
   .footer .contact {
     list-style-type: none;
     margin: 0;
     text-align: left;
-    color: #fff; }
+    color: #fff; 
+    }
     .footer .contact li {
-      margin-bottom: 2rem; }
+      margin-bottom: 2rem; 
+      }
       .footer .contact li p {
-        padding-left: 5rem; }
+        padding-left: 5rem; 
+        }
     .footer .contact i {
       position: absolute;
       background-color: #33383b;
       color: #fff;
-      font-size: 2rem;
+      font-size:15px;
       border-radius: 50%;
       line-height: 1;
       margin: 0 0 0 -4rem;
@@ -175,11 +176,11 @@ body { padding-top: 60px; }
       padding: .25em .45em; }
   .footer .copywrite {
     color: #8f9296;
-    font-size: 0.875rem;
+    font-size: 13px;
     margin: 0 0 1rem 0; }
   .footer .about {
     color: #92999f;
-    font-size: 0.875rem;
+    font-size: 13px;
     margin: 0 0 1rem 0; }
   .footer .footer-links a {
     list-style: none;
@@ -187,7 +188,8 @@ body { padding-top: 60px; }
     color: #fff;
     padding: 3rem 0 2rem;
     margin: 0;
-    font-size: 0.875rem; }
+    font-size: 15px; 
+    }
     .footer .footer-links a::after {
       content: "•";
       padding: 0 0.2rem 0 0.4rem; }
