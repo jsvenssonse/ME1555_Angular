@@ -4,11 +4,11 @@ var apiURL = 'http://88.131.100.231:81/api/';
 
 app.config(function($locationProvider, $routeProvider) {
     $routeProvider
-	.when('/', {
+	/*.when('/home', {
 		templateUrl: 'views/home.html',
 		controller: 'homeController'
-	})
-	.when('/profile', {
+	})*/
+	.when('/', {
 		templateUrl: 'views/profile.html',
 		controller: 'profileController'
 	})
