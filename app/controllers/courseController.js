@@ -9,6 +9,16 @@ $http({
         $scope.data = datan;
         $scope.steps = datan.steps;
        
-        console.log(datan);
+        $scope.course_owner = response.data['user_id'];
 	  });
+$http({
+		method: 'GET',
+		url: apiURL+'users'
+	}).then(function successCallback(response) {
+        $scope.user = console.log(response.data[0]['id']);
+	  });
+      
+      if($scope.user === $scope.steps) { console.log("sucess"); }
+      else { console.log("not"); }
+    
 });
