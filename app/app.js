@@ -1,6 +1,6 @@
 var app = angular.module('app', ['ngRoute', 'ngResource', 'ngAnimate']);
 
-var apiURL = 'http://88.131.100.231:81/api/';
+var apiURL = 'http://localhost:8000/api/';
 
 app.config(function($locationProvider, $routeProvider) {
     $routeProvider
