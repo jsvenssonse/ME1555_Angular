@@ -29,5 +29,6 @@ app.config(function($locationProvider, $routeProvider) {
 		controller: 'homeController'
 	})
 	.otherwise({ redirectTo: '/' });
+    
 });
 
